@@ -1,0 +1,154 @@
+.homeSection {
+    width: 100%;
+    height: 100%;
+}
+
+.homeSection_Container {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.home_salardev {
+    margin-top: 9%;
+    font-size: 45px;
+    color: #f4f4f4;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home_salardev h1 {
+    font-family: "ocr";
+    font-weight: 400;
+    opacity: 0;
+    animation: fadeInAnimation 2s ease-in-out forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.home_salardev h1::selection {
+    background-color: #0AD800;
+}
+
+
+
+.home_salardev span {
+    color: #0AD800;
+    text-shadow: 0 0 15px #0bd800;
+}
+
+.salardev_space {
+    letter-spacing: -25px;
+}
+
+.salardev_about {
+    width: 60%;
+    margin-top: 50px;
+    text-align: center;
+    font-size: 22px;
+    color: #cecece;
+    font-family: "Cairo", sans-serif;
+    opacity: 0;
+    animation: fadeInAnimation2 3s ease-in-out forwards;
+}
+
+@keyframes fadeInAnimation2 {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.social {
+    margin-top: 50px;
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    animation: fadeInAnimation2 3s ease-in-out forwards;
+}
+
+.social_contaner {
+    height: 40px;
+    width: 40px;
+    background: #4075cc47;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.social_contaner_icon.social_contaner_icon {
+    font-size: 25px;
+}
+
+#my-tooltip {
+    background: #0bd800e4;
+    color: #000;
+    font-size: 18px;
+    font-family: "ocr";
+}
+
+#insta:hover {
+    box-shadow: 0 0 20px 5px #5282cfdb;
+}
+
+#youtube:hover {
+    box-shadow: 0 0 20px 5px #e71717b0;
+}
+
+#whatsApp:hover {
+    box-shadow: 0 0 20px 5px #30ce18e8;
+}
+
+#github:hover {
+    box-shadow: 0 0 20px 5px #ffffff4f;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .homeSection_Container {
+        padding: 15px;
+    }
+
+    .home_salardev {
+        margin-top: 50px;
+        font-size: 25px;
+    }
+
+    .home_salardev h1 {
+        word-spacing: 10px;
+    }
+
+    .salardev_about {
+        width: 90%;
+        margin-top: 50px;
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .social {
+        margin-top: 50px;
+        width: 100%;
+        gap: 20px;
+    }
+}

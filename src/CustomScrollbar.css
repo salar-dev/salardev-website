@@ -1,0 +1,23 @@
+::-webkit-scrollbar {
+    width: .3rem;
+    height: 0.1rem;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar-track {
+    background: #eaeaeadd;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #0bd800a1, #0fb40687);
+    border-radius: 100vw;
+    cursor: pointer;
+}
+
+@media (prefers-color-scheme: dark) {
+    ::-webkit-scrollbar-track {
+        background: #040404;
+        cursor: pointer;
+    }
+}
