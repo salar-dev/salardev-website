@@ -9,6 +9,7 @@ function Navbar() {
   const { t } = useTranslation();
   const location = useLocation();
   let navigate = useNavigate();
+  const [isOpen, setOpen] = useState(false);
   const changeLang = () => {
     if (location.pathname === "/ar") {
       navigate("/");
@@ -18,23 +19,26 @@ function Navbar() {
   }
 
   useEffect(() => {
-    const handleScroll = () => {
-      const navbar = document.querySelector(".navbar");
-      if (window.scrollY > 0) {
-        navbar!.classList.add("scrolled");
-      } else {
-        navbar!.classList.remove("scrolled");
-      }
-    };
+    if (!isOpen) {
+      const handleScroll = () => {
+        const navbar = document.querySelector(".navbar");
+        if (window.scrollY > 0) {
+          navbar!.classList.add("scrolled");
+        } else {
+          navbar!.classList.remove("scrolled");
+        }
+      };
 
-    // Add the event listener when the component mounts
-    window.addEventListener("scroll", handleScroll);
+      // Add the event listener when the component mounts
+      window.addEventListener("scroll", handleScroll);
 
-    // Clean up the event listener when the component unmounts
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+      // Clean up the event listener when the component unmounts
+      return () => window.removeEventListener("scroll", handleScroll);
+    }
 
-  const [isOpen, setOpen] = useState(false);
+  }, [isOpen]);
+
+
 
   return (
     <div className='navbar'>

@@ -3,7 +3,7 @@ import "./services.css"
 
 function Services() {
     return (
-        <div className='services'>Services</div>
+        <div className='services'></div>
     )
 }
 

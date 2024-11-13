@@ -14,7 +14,7 @@
     left: 0;
     width: 150%;
     height: 150%;
-    background-color: #000000e1;
+    background-color: #000000da;
     z-index: 0;
     transition: 'transform 0.1s ease-out';
     background-size: cover;
@@ -56,6 +56,10 @@
 }
 
 @media (max-width: 600px) {
+
+    .topBackground {
+        background-color: #000000bb;
+    }
 
     .circle1 {
         width: 90vw;
